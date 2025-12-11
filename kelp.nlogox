@@ -183,7 +183,7 @@ end
 
 to sprout-urchins 
   if ticks mod urchin-immigration-mod = 0 [
-    create-turtles immigration_urchin [
+    create-turtles immigration-urchin [
       set color violet
       set shape "circle"
       set size 0.75
@@ -195,7 +195,7 @@ end
 
 to sprout-starfish 
   if ticks mod starfish-immigration-mod = 0 [
-    create-turtles immigration_star [
+    create-turtles immigration-star [
       set color orange
       set shape "star"
       set size 1.5
