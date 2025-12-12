@@ -271,7 +271,7 @@ end
     <monitor x="1050" precision="17" y="75" height="60" fontSize="11" width="100" display="urchin count">count(turtles with [shape = "circle"])</monitor>
     <monitor x="1050" precision="0" y="140" height="60" fontSize="11" width="100" display="starfish number">count(turtles with [shape = "star"])</monitor>
     <slider x="265" step="1" y="140" max="99" width="250" display="eating-threshold" height="50" min="0" direction="Horizontal" default="99.0" variable="eating-threshold"></slider>
-    <slider x="265" step="1" y="195" max="10" width="250" display="immigration_urchin" height="50" min="0" direction="Horizontal" default="7.0" variable="immigration_urchin"></slider>
+    <slider x="265" step="1" y="195" max="10" width="250" display="immigration-urchin" height="50" min="0" direction="Horizontal" default="7.0" variable="immigration-urchin"></slider>
     <slider x="265" step="1" y="85" max="100" width="250" display="urchins" height="50" min="0" direction="Horizontal" default="60.0" variable="urchins"></slider>
     <button x="265" y="10" height="40" disableUntilTicks="false" forever="true" kind="Observer" width="120">go</button>
     <button x="395" y="10" height="40" disableUntilTicks="false" forever="false" kind="Observer" width="120">setup</button>
@@ -297,7 +297,7 @@ end
     <input x="265" multiline="false" y="250" height="60" variable="urchin-immigration-mod" type="number" width="250">10.0</input>
     <input x="5" multiline="false" y="250" height="60" variable="kelp-grow-mod" type="number" width="250">50.0</input>
     <slider x="5" step="1" y="345" max="30" width="250" display="starfish" height="50" min="0" direction="Horizontal" default="8.0" variable="starfish"></slider>
-    <slider x="5" step="1" y="455" max="10" width="250" display="immigration_star" height="50" min="0" direction="Horizontal" default="0.0" variable="immigration_star"></slider>
+    <slider x="5" step="1" y="455" max="10" width="250" display="immigration-star" height="50" min="0" direction="Horizontal" default="0.0" variable="immigration-star"></slider>
     <input x="5" multiline="false" y="510" height="60" variable="starfish-immigration-mod" type="number" width="250">100.0</input>
     <slider x="5" step="1" y="400" max="99" width="250" display="kill-threshold" height="50" min="0" direction="Horizontal" default="80.0" variable="kill-threshold"></slider>
     <note x="265" y="330" backgroundDark="0" fontSize="12" width="165" markdown="false" height="25" textColorDark="-1604481" textColorLight="-8053223" backgroundLight="0">Sheephead Variables (Fish)</note>
@@ -1175,4 +1175,165 @@ end
     </shape>
   </linkShapes>
   <previewCommands>setup repeat 75 [ go ]</previewCommands>
+  <experiments>
+    <experiment name="Starfish_8" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="25000">
+      <setup>setup</setup>
+      <go>go</go>
+      <runMetricsCondition>ticks mod 100 = 0</runMetricsCondition>
+      <metrics>
+        <metric>count turtles with [color = green]</metric>
+        <metric>count turtles with [shape = "circle"]</metric>
+      </metrics>
+      <constants>
+        <enumeratedValueSet variable="urchin-immigration-mod">
+          <value value="10"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="urchins">
+          <value value="60"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="fish-threshold">
+          <value value="90"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp">
+          <value value="120"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-star">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-size">
+          <value value="2.8"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kill-threshold">
+          <value value="80"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="eating-threshold">
+          <value value="99"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grown">
+          <value value="1"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="sheephead">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish">
+          <value value="8"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grow-mod">
+          <value value="50"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-urchin">
+          <value value="7"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish-immigration-mod">
+          <value value="100"></value>
+        </enumeratedValueSet>
+      </constants>
+    </experiment>
+    <experiment name="Starfish_12" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="25000">
+      <setup>setup</setup>
+      <go>go</go>
+      <runMetricsCondition>ticks mod 100 = 0</runMetricsCondition>
+      <metrics>
+        <metric>count turtles with [color = green]</metric>
+        <metric>count turtles with [shape = "circle"]</metric>
+      </metrics>
+      <constants>
+        <enumeratedValueSet variable="urchin-immigration-mod">
+          <value value="10"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="urchins">
+          <value value="60"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="fish-threshold">
+          <value value="90"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp">
+          <value value="120"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-star">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-size">
+          <value value="2.8"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kill-threshold">
+          <value value="80"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="eating-threshold">
+          <value value="99"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grown">
+          <value value="1"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="sheephead">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish">
+          <value value="12"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grow-mod">
+          <value value="50"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-urchin">
+          <value value="7"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish-immigration-mod">
+          <value value="100"></value>
+        </enumeratedValueSet>
+      </constants>
+    </experiment>
+    <experiment name="Starfish_4" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="25000">
+      <setup>setup</setup>
+      <go>go</go>
+      <runMetricsCondition>ticks mod 100 = 0</runMetricsCondition>
+      <metrics>
+        <metric>count turtles with [color = green]</metric>
+        <metric>count turtles with [shape = "circle"]</metric>
+      </metrics>
+      <constants>
+        <enumeratedValueSet variable="urchin-immigration-mod">
+          <value value="10"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="urchins">
+          <value value="60"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="fish-threshold">
+          <value value="90"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp">
+          <value value="120"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-star">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-size">
+          <value value="2.8"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kill-threshold">
+          <value value="80"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="eating-threshold">
+          <value value="99"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grown">
+          <value value="1"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="sheephead">
+          <value value="0"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish">
+          <value value="4"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="kelp-grow-mod">
+          <value value="50"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="immigration-urchin">
+          <value value="7"></value>
+        </enumeratedValueSet>
+        <enumeratedValueSet variable="starfish-immigration-mod">
+          <value value="100"></value>
+        </enumeratedValueSet>
+      </constants>
+    </experiment>
+  </experiments>
 </model>
